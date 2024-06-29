@@ -26,7 +26,7 @@ class SocialProfileBloc extends Bloc<SocialProfileEvent, SocialProfileState> {
     emit(state.copyWith(loading: true));
     try {
       final response = await userRepository.fetchUsers();
-      print('users : $response');
+      // print('users : $response');
       final users =
           response.map((json) => SocialProfile.fromJson(json)).toList();
       emit(state.copyWith(loading: false, socialProfile: users));

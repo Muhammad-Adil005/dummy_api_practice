@@ -3,6 +3,8 @@ import 'package:dummy_api_practice_app/fruits/fruits.dart';
 import 'package:dummy_api_practice_app/social_profile/socail.dart';
 import 'package:flutter/material.dart';
 
+import '../All_Countries/all_countries_screen.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -42,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -67,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -85,6 +87,31 @@ class HomeScreen extends StatelessWidget {
                 child: const Center(
                   child: Text(
                     'Blog Post',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 32),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => AllCountriesScreen()));
+              },
+              child: Container(
+                height: 40,
+                width: 250,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.indigo,
+                ),
+                child: const Center(
+                  child: Text(
+                    'Call Countries Api',
                     style: TextStyle(
                       color: Colors.white,
                     ),
